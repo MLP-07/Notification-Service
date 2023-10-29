@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/mlp_notification_service
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa.show-sql: true
