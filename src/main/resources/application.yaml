@@ -12,3 +12,35 @@ spring:
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa.show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  mail:
+    host: ${SMTP_HOST}
+    password: ${SMTP_PASS}
+    port: 2525
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    username: ${SMTP_USERNAME}
+
+rabbitmq:
+  exchange:
+    sms:
+      name: sms-exchange
+    email:
+      name: email-exchange
+  queue:
+    sms:
+      name: sms-queue
+      routing:
+        key: sms-queue
+    email:
+      name: email-queue
+      routing:
+        key: email-queue
