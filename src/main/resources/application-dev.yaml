@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
   error:
     include-stacktrace: never
 
@@ -8,12 +8,12 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/mlp_notification_service
+    url: jdbc:mysql://mysql-service:3306/mlp_notification_service
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa.show-sql: true
   rabbitmq:
-    host: localhost
+    host: rabbitmq-service
     port: 5672
     username: guest
     password: guest

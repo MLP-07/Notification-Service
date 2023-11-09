@@ -35,9 +35,12 @@ public class RabbitMqConfig {
     @Value("${rabbitmq.queue.email.routing.key}")
     private String emailQueueRoutingKey;
 
+    @Value("${spring.rabbitmq.host}")
+    private String host;
+
     @Bean
     public CachingConnectionFactory connectionFactory() {
-        return new CachingConnectionFactory("localhost");
+        return new CachingConnectionFactory(host);
     }
 
     @Bean

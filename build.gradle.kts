@@ -35,6 +35,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-mail")
 
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+
+//    implementation("org.flywaydb:flyway-core")
 }
 
 tasks.withType<Test> {
